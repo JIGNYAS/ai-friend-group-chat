@@ -1,0 +1,19 @@
+services:
+  - type: worker
+    name: ai-friends
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN_MAYA
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN_DEV
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN_ZEN
+        sync: false
+      - key: TELEGRAM_GROUP_CHAT_ID
+        sync: false
+      - key: AI_PROVIDER
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
